@@ -1,0 +1,6 @@
+region = "us-east-1"
+secret_key = "your_secret_key"
+access_key = "your_access_key"
+hostname = "my-ec2-instance"
+ami = "your_ami_id"
+instance_type = "t3.micro"

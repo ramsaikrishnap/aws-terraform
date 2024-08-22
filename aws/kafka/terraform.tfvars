@@ -1,0 +1,10 @@
+region = "value"
+msk_cluster_name = "value"
+msk_version = "value"
+security_group_ids = [ "value" ]
+client_subnets = [ "value" ]
+owner = "value"
+project = "value"
+number_of_broker_nodes = "value"
+instance_type = "value"
+ebs_volume_size = "value"
