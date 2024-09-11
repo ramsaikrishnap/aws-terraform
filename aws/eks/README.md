@@ -117,7 +117,7 @@ The configuration uses several variables to customize the EKS cluster setup:
 
 2. Navigate to the repository directory:
    ```
-   cd terraform/aws/ec2/singleinstance
+   cd terraform/aws/eks/
    ```
 
 3. Modify the `terraform.tfvars` file with your specific configuration.
