@@ -57,7 +57,7 @@ For enhanced security, it's recommended to use environment variables for sensiti
 
 For enhanced security, you can use HashiCorp Vault to manage your AWS credentials. Here's how to set it up:
 
-1. Ensure you have HashiCorp Vault installed and configured.
+1. Ensure you have HashiCorp [Vault](https://developer.hashicorp.com/vault/downloads) installed and configured.
 
 2. Store your AWS credentials in Vault:
    ```
@@ -138,7 +138,7 @@ Key features:
 ## Important Notes
 
 - Ensure you replace placeholder values (e.g., "your_ami_id", "vpc-abcd1234") with your actual AWS resource IDs.
-- The `secret_key` and `access_key` should be set as environment variables rather than in the Terraform files for security reasons.
+- The `secret_key` and `access_key` can be set as environment variables rather than in the Terraform files for security reasons and best practice is to use hashicorp vault
 - Review and adjust the instance type, volume sizes, and other parameters as per your requirements.
 - The additional EBS volume is set to be attached at "/dev/sdb". Adjust if necessary.
 - Both root and additional EBS volumes are set to be encrypted by default.

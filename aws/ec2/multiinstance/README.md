@@ -59,7 +59,7 @@ By commenting out these variables, Terraform will automatically use the environm
 
 For enhanced security, you can use HashiCorp Vault to manage your AWS credentials. Here's how to set it up:
 
-1. Ensure you have HashiCorp Vault installed and configured.
+1. Ensure you have HashiCorp [Vault](https://developer.hashicorp.com/vault/downloads) installed and configured.
 
 2. Store your AWS credentials in Vault:
    ```
@@ -147,7 +147,7 @@ Each instance configuration includes:
 ## Important Notes
 
 - Ensure you replace placeholder values (e.g., "your-subnet-id", "your-security-group") with your actual AWS resource IDs.
-- If not using environment variables or Vault, the `access_key` and `secret_key` should be set as environment variables rather than in the Terraform files for security reasons.
+- If not using environment variables or Vault, the `access_key` and `secret_key` can be set as environment variables rather than in the Terraform files for security reasons and best practice is to use hashicorp vault.
 - When using Vault, ensure your Vault server is properly secured and that you're following Vault's security best practices.
 - Review and adjust the instance types, volumes sizes, and other parameters as per your requirements.
 - The EBS device name is set to "/dev/sba" by default. Adjust if necessary.
