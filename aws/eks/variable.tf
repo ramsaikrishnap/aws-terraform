@@ -4,11 +4,11 @@ variable "region" {
 variable "eks_cluster_name" {
   type = string
 }
-variable "eks_cluster_version" {
+variable "vpc_id" {
   type = string
 }
-variable "security_group_ids" {
-  type = list(string)
+variable "eks_cluster_version" {
+  type = string
 }
 variable "endpoint_private_access" {
   type = bool
@@ -28,5 +28,8 @@ variable "owner" {
   type = string
 }
 variable "project" {
+  type = string
+}
+variable "environment" {
   type = string
 }

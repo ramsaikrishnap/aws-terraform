@@ -144,6 +144,11 @@ Each instance configuration includes:
    terraform apply
    ```
 
+## Outputs
+1. Hostname
+2. Private IP address
+3. Instance ID
+
 ## Important Notes
 
 - Ensure you replace placeholder values (e.g., "your-subnet-id", "your-security-group") with your actual AWS resource IDs.
