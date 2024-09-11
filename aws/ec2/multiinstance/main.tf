@@ -5,7 +5,7 @@ resource "aws_instance" "my-instance" {
     subnet_id = var.instance_configs[count.index].instance_type
     security_groups = [var.instance_configs[count.index].security_groups]
     key_name = var.instance_configs[count.index].key_name
-    user_data = var.instance_configs[count.index].platform == "linux" ? "${file(user_data.sh)}" : null
+    user_data = var.instance_configs[count.index].platform == "linux" ? "${file(user_data.sh)}" : null # User data will be added only for Linux platforms
     root_block_device {
         volume_size = var.instance_configs[count.index].root_block_device.root_volume_size
         volume_type = var.instance_configs[count.index].root_block_device.root_volume_type
@@ -24,8 +24,10 @@ resource "aws_instance" "my-instance" {
       
     }
     tags = {
-        name = var.instance_configs[count.index].hostname
+        name = var.instance_configs[count.index].name
         startdate = lower(formatdate("DD-MM-YYYY"),timestamp())
+        environment = var.instance_configs[count.index].tags.environment
+        project = var.instance_configs[count.index].tags.project
     }
     
 }

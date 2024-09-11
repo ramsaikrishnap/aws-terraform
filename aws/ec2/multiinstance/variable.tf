@@ -20,6 +20,10 @@ variable "instance_configs" {
         ebs_kms_key_id = string
         ebs_iops = string
     }))
+    tags = list(object({
+      environment = string
+      project = string 
+    }))
   }))
 }
 variable "ebs_volume_encrypted" {

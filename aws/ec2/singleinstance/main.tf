@@ -29,7 +29,7 @@ resource "aws_security_group" "my-instance-sg" {
 }
 
 resource "aws_instance" "my-instance" {
-  count = var.count
+
   ami = var.ami
   instance_type = var.instance_type
   subnet_id = var.subnet_id
