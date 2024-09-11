@@ -110,12 +110,12 @@ Key features:
 
 1. Clone this repository:
    ```
-   git clone <repository-url>
+   git clone https://github.com/ramsaikrishnap/terraform.git
    ```
 
 2. Navigate to the repository directory:
    ```
-   cd <repository-directory>
+   cd terraform/aws/ec2/singleinstance
    ```
 
 3. Modify the `terraform.tfvars` file with your specific configuration.
