@@ -144,6 +144,12 @@ The configuration uses several variables to customize the EKS cluster setup:
 4. EKS Node Security Group
 5. EKS Cluster Security Group
 
+## References
+1. [aws_eks_cluster](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eks_cluster.html)
+2. [aws_iam_role_policy_attachment](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment)
+3. [aws_security_group_rule](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group_rule.html)
+4. [aws_iam_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role)
+5. [aws_security_group](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group)
 ## Important Notes
 
 - Please note that this will create only EKS cluster and code for EKS nodes will be added soon.

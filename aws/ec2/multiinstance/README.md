@@ -149,6 +149,9 @@ Each instance configuration includes:
 2. Private IP address
 3. Instance ID
 
+## References
+1. [aws_instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)
+
 ## Important Notes
 
 - Ensure you replace placeholder values (e.g., "your-subnet-id", "your-security-group") with your actual AWS resource IDs.

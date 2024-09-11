@@ -142,12 +142,16 @@ Key features:
 
 ## Important Notes
 
-- Ensure you replace placeholder values (e.g., "your_ami_id", "vpc-abcd1234") with your actual AWS resource IDs.
+- Ensure you replace placeholder values (e.g., "your_ami_id", "your_vpc_id") with your actual AWS resource IDs.
 - The `secret_key` and `access_key` can be set as environment variables rather than in the Terraform files for security reasons and best practice is to use hashicorp vault
 - Review and adjust the instance type, volume sizes, and other parameters as per your requirements.
 - The additional EBS volume is set to be attached at "/dev/sdb". Adjust if necessary.
 - Both root and additional EBS volumes are set to be encrypted by default.
 
+## References
+1. [aws_instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)
+2. [aws_vpc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc.html)
+3. [aws_security_group](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group)
 ## Contributing
 
 Feel free to submit issues or pull requests if you have suggestions for improvements or have found any bugs.
