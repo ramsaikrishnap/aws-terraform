@@ -1,6 +1,3 @@
-provider "aws" {
-  region = var.region
-}
 locals {
   tags = {
     owner = var.owner
@@ -23,5 +20,20 @@ resource "aws_msk_cluster" "my_msk_cluster" {
     client_subnets = var.client_subnets
     security_groups = var.security_group_ids
   }
+  configuration_info {
+    arn = aws_msk_configuration.msk_config.arn
+    revision = aws_msk_configuration.msk_config.latest_revision
+  }
   tags = local.tags
+}
+resource "aws_msk_configuration" "msk_config" {
+  kafka_versions = ["${var.msk_version}"]
+  name = "${var.msk_cluster_name}-msk-config"
+  server_properties = <<PROPERTIES
+  num.io.threads=12
+  num.network.threads=10
+  num.partitions=1
+  num.replica.fetchers=2
+  PROPERTIES
+  
 }

@@ -4,7 +4,7 @@ variable "region" {
 }
 variable "project" {
   type=string
-  default = "my-first-project"
+  default = "my-rds-project"
 }
 variable "owner" {
   type=string
@@ -20,66 +20,66 @@ variable "subnet_ids" {
 }
 variable "db_major_engine_version" {
   type=string
-  default = "my-db-instance"
+  default = "16.3"
 }
 variable "db_engine" {
   type=string
-  default = "my-db-instance"
+  default = "postgres"
 }
 variable "db_engine_version" {
   type=string
-  default = "my-db-instance"
+  default = "16"
 }
 variable "db_name" {
   type=string
-  default = "my-db-instance"
+  default = "pgdb"
 }
 variable "db_kms_key_id" {
   type=string
-  default = "my-db-instance"
+  default = "my-kms-key-id"
 }
 variable "db_port" {
   type=string
-  default = "my-db-instance"
+  default = "6379"
 }
 variable "db_iops" {
   type=string
-  default = "my-db-instance"
+  default = null
 }
 variable "db_allocated_storage" {
-  type=string
-  default = "my-db-instance"
+  type=number
+  default = 200
 }
 variable "username" {
   type=string
-  default = "my-db-instance"
+  default = "pgadmin"
 }
 variable "password" {
   type=string
-  default = "my-db-instance"
+  default = "mypassword"
 }
 variable "db_storage_type" {
   type=string
-  default = "my-db-instance"
+  default = "gp3"
 }
 variable "db_multi_az" {
-  type=string
-  default = "my-db-instance"
+  type=bool
+  default = true
 }
 variable "vpc_security_group_ids" {
   type=list(string)
-  default = "my-db-instance"
+  default = ["my-db-security-group-id"]
 }
 variable "db_instance_class" {
   type=string
-  default = "my-db-instance"
+  default = "db.r6g.large"
 }
 variable "db_license_model" {
   type = string
-  default = "value"
+  default = null
 }
 variable "replica_instance_class" {
     type = string
-    default = "value"
+    default = "db.r6g.large"
   
 }
