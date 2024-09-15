@@ -42,9 +42,9 @@ resource "aws_db_instance" "db" {
   db_name=var.db_name
   port = var.db_port
  #*** license_model = var.db_license_model  # This value should be used only for ORACLE RDS Instance types.
-  db_subnet_group_name = aws_db_option_group.dboptiongrp[0].name
+  db_subnet_group_name = aws_db_option_group.dboptiongrp.name
   vpc_security_group_ids = var.vpc_security_group_ids
-  parameter_group_name = aws_db_parameter_group.dbparametergrp[0].name
+  parameter_group_name = aws_db_parameter_group.dbparametergrp.name
   iops = var.db_iops
   skip_final_snapshot = true
   auto_minor_version_upgrade = true
