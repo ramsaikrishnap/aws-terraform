@@ -5,7 +5,7 @@ data "google_project" "project"{
 data "google_compute_subnetwork" "my_subnet"{
   name = var.subnet_name
   project = var.project_id
-  region = var.zone
+  region = var.subnet_region
 }
 data "google_compute_image" "my_image"{
   name= var.compute_image_name
