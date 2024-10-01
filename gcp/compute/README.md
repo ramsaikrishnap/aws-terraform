@@ -131,6 +131,14 @@ terraform apply
 2. instance_external_ip: The external IP address of the instance (if applicable)
 3. additional_disk_names: The names of the additional disks
 
+## References
+1. [google_project](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/google_project)
+2. [google_compute_subnetwork](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_subnetwork)
+3. [google_compute_image](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_image)
+4. [google_compute_instance](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_instance)
+5. [google_compute_disk](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_disk)
+6. [google_compute_attached_disk](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_attached_disk)
+
 ## Contributing
 
 Contributions to improve this module are welcome. Please submit a pull request or open an issue to discuss proposed changes.
