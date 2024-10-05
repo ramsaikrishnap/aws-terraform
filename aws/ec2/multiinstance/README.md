@@ -13,7 +13,7 @@ Before you begin, ensure you have the following:
 1. [Terraform](https://www.terraform.io/downloads.html) installed
 2. AWS CLI configured with appropriate credentials
 3. AWS Access Key and Secret Key
-4. (Optional) HashiCorp Vault setup for secure credential management
+4. (Optional) HashiCorp Vault setup for secure credential management   
 
 ## Configuration
 
